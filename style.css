@@ -1,0 +1,636 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+:root{
+    /* ================== Width ================= */
+    --width-lg: 90%;
+    --width-md: 86%;
+    --width-sm: 84%;
+	--color-gb:rgb(80, 157, 193);
+	--color-text:white;
+	--second-gb:rgb(24, 24, 63);
+}
+html{
+	scroll-behavior: smooth;
+}
+nav{
+    border-bottom: 2px solid rgb(29, 29, 112);
+    background-color: var(--second-gb);
+    color: white;
+    position: fixed;
+    z-index: 20;
+    width: 100%;
+    height:11%; 
+    top: 0;
+}
+.navbar{
+	display: flex;
+	justify-content: center;
+
+
+	/* position: sticky; */
+	/* top: 0; */
+}
+.logo h1{
+	text-decoration-style: bold;
+	height: 20%;
+	width: 30%;
+	color: tomato;
+	transform:rotate(30deg);
+	text-decoration: underline; 
+}
+.navbar ul{
+	display: flex;
+	list-style: none;
+	margin: 20px 30px;
+}
+.navbar ul li{
+	font-family: century;
+	font-size: 1.1rem;
+	font-weight: bold;
+	margin-left:100px;
+}
+.navbar ul li a{
+	text-decoration: none;
+	color: white;
+	padding: 8px 25px;
+	transition: all .5s ease
+}
+.navbar ul li a:hover{
+	background-color: white;
+	color: black;
+	box-shadow: 0 0 10px white;
+}
+.hambager{
+	width: 5%;
+	display: none;
+}
+@media screen AND (max-width: 1024px){
+	.container{
+		width: var(--width-md);
+		margin: 0 auto;
+	}
+	.hambager {
+		width: 3%;
+		display: block;
+	}
+	#menu{
+		width: 50vw;
+		position: fixed;
+		background-color: var(--color-blue);
+		top: 15%;
+		right: -300px;
+		height: 40vh;
+		text-align: right;
+		transition: 0.5s ease-in-out;
+	}
+	#menu ul{
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+		background-color: black;
+
+	}
+	#menu ul li{
+		border-top: 1px solid var(--color-bg);
+		padding: 1rem 2rem;
+		background-color: black;
+	}
+	}
+
+	@media screen AND (max-width: 600px) AND (min-width: 300px){
+		.container{
+			width: var(--width-sm);
+			margin: 0 auto;
+		}
+		.hambager {
+			width: 3%;
+			display: block;
+			margin-right: 10%;;
+		}
+		#menu{
+			width: 100vw;
+			position: fixed;
+			background-color: var(--color-blue);
+			top: 15%;
+			right: -300px;
+			height: 40vh;
+			text-align: center;
+			transition: 0.5s ease-in-out;
+		}
+		#menu ul{
+			display: flex;
+			flex-direction: column;
+			gap: 2rem;
+			width: 70%;
+			background-color: black;
+		}
+		#menu ul li{
+			border-top: 1px solid var(--color-bg);
+			padding: 1rem 2rem;
+			background-color: black;
+		}
+		}
+		@media screen AND (max-width: 300px) AND (min-width: 100px){
+			.container{
+				width: var(--width-sm);
+				margin: 0 auto;
+			}
+			.hambager {
+				width: 3%;
+				display: block;
+				margin-right: 10%;;
+			}
+			#menu{
+				width: 140vw;
+				position: fixed;
+				background-color: var(--color-blue);
+				top: 15%;
+				right: -300px;
+				height: 40vh;
+				text-align: center;
+				transition: 0.5s ease-in-out;
+			}
+			#menu ul{
+				display: flex;
+				flex-direction: column;
+				gap: 2rem;
+				width: 70%;
+				background-color: black;
+			}
+			#menu ul li{
+				border-top: 1px solid var(--color-bg);
+				padding: 1rem 2rem;
+				background-color: black;
+			}
+			}
+/*====Home section====*/
+
+#Home{
+	display: flex;
+	flex-direction: column;
+	background-color:;
+	height: 840px;
+	justify-content: center;
+	align-items: center;
+	color: white;
+
+}
+section{
+	padding: 0;
+}
+h1{
+	margin-bottom: 15px;
+}
+#Home::before{
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	background: url('mfataneza.jpg') no-repeat center center/cover;
+	height:800px;
+	width: 1200px;
+	z-index: -1;
+	opacity: .9;
+	width: 100%;
+	margin: 0 auto;
+}
+.main{
+	display: flex;
+	flex-direction: column;
+	/*border: 1px solid white;*/
+	align-items: center;
+	position: absolute;
+	top: 30%;
+	left: 20%;
+}
+.head{
+	font-family: century;
+	font-size: 3rem;
+	text-align: center;
+	margin: 40px 0px;
+}
+.btn{
+	padding: 10px 35px;
+	background-color: var(--color-gb);
+	border: 1px solid white;
+	color: black;
+	outline: none;
+	transition: 0.6s ease;
+	border-radius: 60%;
+}
+.btn:hover{
+	cursor: pointer;
+	background-color: white;
+	color: black;
+	box-shadow: 0 0 5px var(--color-gb),0 0 10px white,0 0 15px white;
+	font-weight: bold;
+}
+/*About me section*/
+#about{
+	height: 90vh;
+	margin-top: 2rem;
+}
+ h1{
+	justify-content: center;
+	text-align: center;
+}
+.aboutgrid{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 2rem;
+}
+.abcard{
+	height: 300px;
+	background-color:var(--color-gb);
+	border-radius: 12px;
+}
+.abcard img {
+	height: 100%;
+width: 100%;
+}
+.abcard p{
+	margin:1rem;
+	padding: 2rem;
+
+}
+.abcard h2{
+	margin-left: 100px;
+	margin-top: 50px;
+	font-size: large;
+	color: black;
+}
+.container{
+	margin: 0 auto;
+	width: var(--width-lg);
+}
+.aboutheading{
+	display: grid;
+	grid-template-columns: repeat(2,1fr);
+}
+.pic{
+	display: flex;
+	flex-direction: column;
+	gap:1rem;
+	width: 100%;
+	height: 100%;
+	/*background-color: #ff2;*/
+}
+.pic img{
+	width:90%;
+	height:90%;
+}
+.picdisc{
+	position: absolute;
+	color: white;
+	width:38%;
+	background-color: black;
+	height:60%;
+	opacity: 0.8;
+}
+
+.picdisc h1{
+	color: green;
+	padding: 1rem;
+	margin-top: 15px;
+	margin-bottom: 10px;
+}
+.picdisc h3{
+	top: 30%;
+	margin-bottom: 30%;
+	margin-top: 30%;
+	margin: 7px;
+	text-align: center;
+
+
+}
+.intro{
+	display: flex;
+	flex-direction: column;
+	background-color: tomato;
+	width: 100%;
+	height: 100%;
+
+}
+.introdesc{
+	position: absolute;
+	padding: 7px;
+	background-color: black;
+	opacity: 0.7;
+	height: 62%;
+	width: 41.8%;
+}
+.introdesc h1{
+	color: white;
+	font-size: 2rem;
+	margin-bottom: 20px;
+
+}
+.introdesc h3{
+	color: white;
+	margin: 17px;
+	padding: 2rem;
+}
+#mycontacts{
+	background-color:rgb(17, 111, 154);
+	
+	width: 100%;
+	height: 60vh;
+	margin: 0 auto;
+	color: white;
+}
+/* ------------------------------------------------------------------------ */
+.address{
+	display: grid;
+	grid-template-columns: repeat(4,1fr);
+	gap: 2rem;
+	justify-content: space-between;
+}
+.combineclass{
+	display: flex;
+	flex-direction: row;
+	gap: 6rem;
+
+}
+.div2,.div4{
+	font-size: 1rem;
+	padding:65px;
+	margin-top: 1px;
+}
+
+#mycontacts h1{
+	margin: 0rem;
+	text-decoration-style: bold;
+	padding:2rem;
+
+}
+#portfolios{
+display: flex;
+flex-direction: column;
+background-color: var(--second-gb);
+color: rgb(0, 0, 0);
+align-items: center;
+padding: 20px;
+margin-top: 3rem;
+}
+
+#portfolios h1{
+	text-align:center;
+	font-family: initial;
+}
+.gallery{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 2rem;
+	margin-top: 3rem;
+}
+img{
+	height:100%;
+	width: 100%;
+	object-fit: cover;
+
+}
+/*service*/
+#SERVICES{
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
+	background-color:rgb(13, 13, 40);
+	
+}
+.row{
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	box-sizing: border-box;
+
+
+}
+.box{
+	display: flex;
+	flex-direction: column;
+	width: 350px;
+	height: 450px;
+	border:1px solid black;
+	margin:10px;
+	align-items: center;
+	text-align: justify;
+	padding: 10px;
+	border-radius: 20px;
+	background: linear-gradient(to top,var(--color-gb) 50%,white 50%);
+	background-size: 100% 200%;
+	transition: all .8s;
+}
+.box:hover{
+	background-position: left bottom;
+	color: white;
+	border:none;
+	box-shadow: 0 0 20px var(--color-gb);
+}
+/*contacts*/
+#contact{
+	display: flex;
+	flex-direction: column;
+	box-sizing: border-box;
+	background-color: black;
+	color: white;
+	padding: 20px;
+	width: 100%;
+
+}
+#contact form{
+	display: flex;
+	flex-direction: column;
+	box-sizing: border-box;
+	margin:20px 0px;
+}
+#contact form input {
+	border-radius: 300px;
+	padding: 10px;
+	margin: 15px;
+	width: 20%;
+	border:none;
+	outline: none;
+	background-color: rgb(64, 158, 158);
+}
+#contact form input :placeholder-shown{
+	color: rgba(96, 15, 15, 0.5);
+
+}
+#name{
+	width:40%;
+	padding: 10px;
+	margin:15px;
+	border:none;
+	outline: none;
+
+}
+#msg {
+	width: 20%;
+	padding: 10px;
+	margin:15px;
+	border:none;
+	outline: none;
+	height: 15%;
+
+}
+#send{
+	padding: 10px;
+	width: 10%;
+	margin: 10px;
+	border:none;
+	outline: none;
+}
+#send:hover{
+cursor: pointer;
+box-shadow: 0 0 10px white;
+}
+@media screen AND (max-width: 1024px) {
+	.container{
+		width: var(--width-md);
+		margin: 0;
+	}
+	#about{
+		height: 150vh;
+		margin-top: 4rem;
+	}
+	.aboutgrid{
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 2rem;
+		margin-left: 4rem;
+	}
+	.abcard{
+		height: 400px;
+		background-color: rgb(14, 56, 56);
+		border-radius: 12px;
+	}
+	.abcard img {
+		height: 380px;
+	width: 90%;
+	}
+	
+	#mycontacts{
+		background-color:rgb(108, 93, 19);
+		width: 70%;
+		height: 70vh;
+		margin: 0 auto;
+		color: rgb(4, 1, 1);
+		margin-top: 30rem;
+	}
+	.address{
+		display: block;
+		
+		justify-content: space-between;
+	}
+	.gallery{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 2rem;
+		margin-top: 3rem;
+	}
+}
+@media screen AND (max-width: 300px)  {
+	.container{
+		width: var(--width-md);
+		margin: 0;
+	}
+	#about{
+		height: 220vh;
+		margin-top: 4rem;
+	}
+	.aboutgrid{
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 2rem;
+		margin-left: 4rem;
+	}
+	.abcard{
+		height: 450px;
+		background-color: rgb(14, 56, 56);
+		border-radius: 12px;
+	}
+	.abcard img {
+		height: 300px;
+	width: 70%;
+	}
+	
+	#mycontacts{
+		background-color:rgb(177, 132, 28);
+		width: 50%;
+		height: 50vh;
+		margin: 0 auto;
+		color: rgb(15, 4, 4);
+		margin-top: 30rem;
+	}
+	address{
+		display: grid;
+		grid-template-columns: repeat 1fr 1fr ;
+		gap: 2rem;
+		justify-content: space-between;
+	}
+	.gallery{
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 2rem;
+		margin-top: 3rem;
+	}
+}
+@media screen AND (max-width: 600px) And (min-width: 300px) {
+	.container{
+		width: var(--width-md);
+		margin: 0;
+	}
+	#about{
+		height: 160vh;
+		margin-top: 4rem;
+	}
+	.aboutgrid{
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 2rem;
+		margin-left: 4rem;
+	}
+	.abcard{
+		height: 450px;
+		background-color: rgb(14, 56, 56);
+		border-radius: 12px;
+	}
+	.abcard img {
+		height: 300px;
+	width: 70%;
+	}
+	
+	#mycontacts{
+		background-color:rgb(177, 132, 28);
+		width: 50%;
+		height: 50vh;
+		margin: 0 auto;
+		color: rgb(15, 4, 4);
+		margin-top: 30rem;
+	}
+	address{
+		display: grid;
+		grid-template-columns: repeat 1fr 1fr ;
+		gap: 2rem;
+		justify-content: space-between;
+	}
+	.gallery{
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 2rem;
+		margin-top: 3rem;
+	}
+}
+.abcard{
+	padding: 10px;
+}
+.infox{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 1px solid black;
+	height: 60px;
+}
